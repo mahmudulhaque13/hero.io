@@ -40,6 +40,9 @@ const Banner = () => {
             </a>
           </button>
         </div>
+        <div>
+          <img className="mx-auto" src={bannerImage} alt="" />
+        </div>
       </div>
     </div>
   );
