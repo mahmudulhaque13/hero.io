@@ -43,7 +43,7 @@ const Banner = () => {
         <div>
           <img className="mx-auto" src={bannerImage} alt="" />
         </div>
-        <div className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white ">
+        <div className="bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white ">
           <h1 className="font-bold  text-3xl py-5">
             Trusted by Millions, Built for You
           </h1>
