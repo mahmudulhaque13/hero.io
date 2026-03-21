@@ -25,7 +25,7 @@ const Home = () => {
           ))}
         </div>
         <div className="flex justify-center items-center my-5">
-          <NavLink className="btn btn-outline bg-violet-400" to="/apps">
+          <NavLink className="btn  bg-violet-400" to="/apps">
             Show All
           </NavLink>
         </div>
