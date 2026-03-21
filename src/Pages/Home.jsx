@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../Components/Banner";
+import AppCard from "../Components/AppCard";
 
 const Home = () => {
   return (
@@ -11,6 +12,11 @@ const Home = () => {
           <p className="text-center text-gray-500">
             Explore All Trending Apps on the Market developed by us
           </p>
+        </div>
+        <div className="gap-5  grid place-items-center grid-cols-1 mx-auto md:grid-cols-2 lg:grid-cols-4">
+          {(<TrendingApp></TrendingApp>).map((app) => (
+            <AppCard key={app.id} app={app}></AppCard>
+          ))}
         </div>
       </div>
     </div>
