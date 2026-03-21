@@ -26,7 +26,7 @@ const Apps = () => {
         </h1>
 
         <p className="text-center mt-6 text-gray-500">
-          Explore all apps developed by us. We code for millions 🚀
+          Explore all apps developed by us. We code for millions
         </p>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-10">
