@@ -22,7 +22,7 @@ const ErrorPage = () => {
 
       {/* BUTTON */}
       <button
-        onClick={() => navigate("/")} // 🔥 goes to Home
+        onClick={() => navigate("/")} // 🔥
         className="mt-6 px-6 py-2 bg-[#9F62F2] text-white rounded-md hover:opacity-90"
       >
         Go Back!

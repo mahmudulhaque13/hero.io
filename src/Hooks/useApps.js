@@ -1,19 +1,22 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useLoading } from "../Context/LoadingContext";
 
 const useApps = () => {
   const [apps, setApps] = useState([]);
-  const [loading, setLoading] = useState([true]);
-  const [error, setError] = useState([null]);
+  const { setLoading } = useLoading();
 
   useEffect(() => {
-    // setLoading(true);
-    axios("../AppsData.json")
-      .then((data) => setApps(data.data))
-      .catch((err) => setError(err))
+    setLoading(true);
+
+    axios
+      .get("/AppsData.json")
+      .then((res) => setApps(res.data))
+      .catch((err) => console.error(err))
       .finally(() => setLoading(false));
   }, []);
-  return [apps, loading, error];
+
+  return [apps];
 };
 
 export default useApps;
