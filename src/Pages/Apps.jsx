@@ -14,7 +14,7 @@ const Apps = () => {
     ? apps.filter((app) => app.title.toLowerCase().includes(term))
     : apps;
 
-  // ✅ 1. LOADING UI (FIRST)
+  
   if (loading) {
     return (
       <div className="min-h-[80vh] flex flex-col items-center justify-center">
@@ -24,7 +24,7 @@ const Apps = () => {
     );
   }
 
-  // ✅ 2. ERROR UI (SECOND)
+  
   if (error) {
     return (
       <div className="min-h-[80vh] flex items-center justify-center text-red-500">
@@ -33,15 +33,15 @@ const Apps = () => {
     );
   }
 
-  // ✅ 3. NO SEARCH RESULT (THIRD)
+  
   if (searchedApps.length === 0) {
     return <AppError backTo="/apps" />;
   }
 
-  // ✅ 4. NORMAL UI (LAST)
+  
   return (
     <div className="px-4 md:px-10">
-      {/* HEADER */}
+      
       <div>
         <h1 className="text-center font-bold text-4xl mt-20">
           Our All Applications
@@ -51,7 +51,7 @@ const Apps = () => {
           Explore all apps developed by us. We code for millions 🚀
         </p>
 
-        {/* SEARCH + COUNT */}
+        
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-10">
           <p className="font-bold">({searchedApps.length}) Apps Found</p>
 
@@ -68,7 +68,7 @@ const Apps = () => {
         </div>
       </div>
 
-      {/* APPS GRID */}
+      
       <div className="mt-10 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {searchedApps.map((app) => (
           <AppCard key={app.id} app={app} />
