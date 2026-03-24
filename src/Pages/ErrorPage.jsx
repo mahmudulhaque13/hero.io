@@ -7,22 +7,22 @@ const ErrorPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center text-center px-4 bg-gray-50">
-      {/* IMAGE */}
+      
       <img src={bannerImage} alt="404" className="w-72 md:w-96 mb-6" />
 
-      {/* TITLE */}
+      
       <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
         Oops, page not found!
       </h1>
 
-      {/* DESCRIPTION */}
+      
       <p className="text-gray-500 mt-4 max-w-md">
         The page you are looking for is not available.
       </p>
 
-      {/* BUTTON */}
+      
       <button
-        onClick={() => navigate("/")} // 🔥
+        onClick={() => navigate("/")} 
         className="mt-6 px-6 py-2 bg-[#9F62F2] text-white rounded-md hover:opacity-90"
       >
         Go Back!
